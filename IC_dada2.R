@@ -102,6 +102,8 @@ ref_db = paste0(dbpath, "silva_nr99_v138.1_train_set.fa.gz")
 
 taxonomy_tab_IC <- assignTaxonomy(seqs_IC, refFasta = ref_db)
 
+taxa <- addSpecies(seqs_IC, "silva_v138.2_assignSpecies.fa.gz")
+
 
 IC_Metadata <- read.csv("https://raw.github.com/reaset41/IC-Urobiome-Longitudinal/refs/heads/main/IC_Metadata.csv")
 
